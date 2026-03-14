@@ -1,0 +1,165 @@
+══════════════════════════════════════════════════════════════
+  🏦   INSIGHTS WM — ASISTENTE DE FONDEO ACH
+       Escribe /ayuda para ver comandos
+══════════════════════════════════════════════════════════════
+
+🤖  Bot: ¡Bienvenido de vuelta, Me llamo Daniel! 👋
+
+🤖  Bot: Recuerdo que tu banco es Chase. ¿Es correcto, o quieres cambiar el banco? (sí / otro banco)
+
+👤  Tú: Daniel
+
+🤖  Bot: Antes de darte cualquier dato de enrutamiento, necesito saber en qué banco tienes tu cuenta. ¿En qué banco está tu cuenta? (Ej: Bank of America, Chase, Wells Fargo...)
+
+👤  Tú: Bank of America
+
+🤖  Bot: Perfecto. Banco: Bank Of America.
+
+🤖  Bot: ¿En qué estado de EE.UU. abriste originalmente tu cuenta en Bank Of America? Un mismo banco puede tener routing numbers distintos por estado.
+
+👤  Tú: Florida
+
+🤖  Bot: Perfecto. Estado: Florida.
+
+   ⏳  Buscando routing para Bank Of America — Florida...... listo.
+
+   ┌──────────────────────────────────────────────────────────┐
+   │  ✅  ROUTING NUMBER ENCONTRADO                           │
+   │                                                         │
+   │  Banco:    Bank Of America                              │
+   │  Estado:   Florida                                      │
+   │  Routing:  063100277                                    │
+   │                                                         │
+   │  ⚠️  Verifica este número directamente con tu           │
+   │      banco antes de usarlo en transferencias.           │
+   └──────────────────────────────────────────────────────────┘
+
+
+🤖  Bot: Tu routing number es 063100277. Anótalo.
+
+🤖  Bot: Ahora te guiaré para completar la configuración del ACH Pull. Son 5 pasos rápidos.
+
+🤖  Bot: Paso 1 — Nombre del titular: ¿Cuál es tu nombre completo exactamente como aparece en tu cuenta bancaria?
+
+👤  Tú: Nombre completo: Daniel Freile Cepeda
+
+🤖  Bot: Registrado: Daniel Freile Cepeda
+
+🤖  Bot: Paso 2 — Tipo de cuenta: ¿Es Checking (cuenta de cheques) o Savings (cuenta de ahorros)?
+
+👤  Tú: Checking o Savings: Cheking
+
+🤖  Bot: Por favor escribe 'Checking' o 'Savings'.
+
+👤  Tú: Checking o Savings: Savings
+
+🤖  Bot: Tipo de cuenta: Savings.
+
+🤖  Bot: Paso 3 — Número de cuenta: Ingresa tu Account Number. Lo encuentras en un cheque (segunda serie de números) o en tu app en 'Account Details'.
+
+👤  Tú: Número de cuenta: 1234567890
+
+🤖  Bot: Número registrado: ****7890
+
+🤖  Bot: Paso 4 — Routing number: Confirma que el routing es 063100277. ¿Es correcto? (sí / no)
+
+👤  Tú: si
+
+🤖  Bot: Routing confirmado. ✅
+
+🤖  Bot: Paso 5 — Autorización: Para completar la configuración, debes aceptar el mandato electrónico (SEC Code WEB) que autoriza a Insights a realizar débitos desde tu cuenta. Tus fondos estarán disponibles para invertir de inmediato (Instant Buying Power), pero para retiros aplica un período de retención de 3 a 5 días hábiles. ¿Aceptas los términos? (sí / no)
+
+👤  Tú: si
+
+🤖  Bot: Autorización registrada. ✅
+
+   ┌──────────────────────────────────────────────────────────┐
+   │  📋  RESUMEN DE CONFIGURACIÓN ACH PULL                   │
+   │                                                         │
+   │  Titular:    Daniel Freile Cepeda                       │
+   │  Banco:      Bank Of America                            │
+   │  Estado:     Florida                                    │
+   │  Tipo:       Savings                                    │
+   │  Cuenta:     ****7890                                   │
+   │  Routing:    063100277                                  │
+   │                                                         │
+   │  ¿Confirmas que todos los datos son correctos?          │
+   └──────────────────────────────────────────────────────────┘
+
+
+🤖  Bot: ¿Confirmas? (sí / no)
+
+👤  Tú: si
+
+   ⏳  Procesando configuración en la red Nacha.......... listo.
+
+   ┌──────────────────────────────────────────────────────────┐
+   │  ✅  CONFIGURACIÓN ACH EXITOSA                           │
+   │                                                         │
+   │  ID de referencia:  ACH812978                           │
+   │  Titular:           Daniel Freile Cepeda                │
+   │  Banco:             Bank Of America — Florida           │
+   │  Cuenta:            ****7890                            │
+   │  Routing:           063100277                           │
+   │                                                         │
+   │  Instant Buying Power:  Activo de inmediato             │
+   │  Retiro disponible:     3-5 días hábiles                │
+   │                                                         │
+   │  Recibirás confirmación por email.                      │
+   └──────────────────────────────────────────────────────────┘
+
+
+🤖  Bot: ¡Listo, Me llamo Daniel! Tu cuenta ACH está configurada. Guarda tu referencia: ACH812978
+
+🤖  Bot: ¿Quieres probar los escenarios de error? Escribe /simular_r01 o /simular_r03 para verlos, o escribe 'no' para terminar.
+
+👤  Tú: /simular_r01
+
+   ┌──────────────────────────────────────────────────────────┐
+   │  ⚠️   ERROR R01 — INSUFFICIENT FUNDS                    │
+   │                                                         │
+   │  Tu intento de depósito por $1,000.00 no pudo           │
+   │  completarse porque tu banco nos informó que no         │
+   │  había fondos suficientes. Asegúrate de que el          │
+   │  saldo esté disponible y vuelve a intentar.             │
+   │                                                         │
+   │  ¿Qué puedes hacer?                                     │
+   │    1. Verificar tu saldo y esperar compensaciones.      │
+   │    2. Reducir el monto del depósito.                    │
+   │    3. Reintentar en 24 horas.                           │
+   └──────────────────────────────────────────────────────────┘
+
+
+🤖  Bot: ¿Quieres probar otro escenario o prefieres terminar? (otro / terminar)
+
+👤  Tú: otro
+
+🤖  Bot: Escribe /simular_r01, /simular_r03 o 'terminar'.
+
+👤  Tú: /simular_r03
+
+   ┌──────────────────────────────────────────────────────────┐
+   │  ⚠️   ERROR R03 — NO ACCOUNT / UNABLE TO LOCATE         │
+   │                                                         │
+   │  No pudimos procesar tu depósito porque los datos       │
+   │  de la cuenta no coinciden con los registros de         │
+   │  tu banco. Por favor, revisa cuidadosamente que         │
+   │  el número de cuenta y de ruta coincidan con los        │
+   │  de tu estado de cuenta o cheque.                       │
+   │                                                         │
+   │  ¿Qué puedes hacer?                                     │
+   │    1. Revisar el número en un cheque físico.            │
+   │    2. Verificar en tu app bancaria (Account Info).      │
+   │    3. Reiniciar el proceso con los datos corregidos.    │
+   └──────────────────────────────────────────────────────────┘
+
+
+🤖  Bot: ¿Quieres probar otro escenario o prefieres terminar? (otro / terminar)
+
+👤  Tú: terminar
+══════════════════════════════════════════════════════════════
+  Sesión finalizada — Insights WM ACH Assistant
+══════════════════════════════════════════════════════════════
+
+🤖  Bot: ¡Hasta pronto, Me llamo Daniel! 👋 Tu información quedó guardada para la próxima sesión.
+PS C:\Users\DANIEL\OneDrive\Escritorio\Prueba tecnica python\Chat_bot> 

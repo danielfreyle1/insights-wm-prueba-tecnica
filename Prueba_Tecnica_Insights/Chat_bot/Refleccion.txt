@@ -1,0 +1,9 @@
+Reflexión — Agente ACH Insights
+
+Si tuviera más tiempo, conectaría el agente a una fuente de datos en tiempo real para los números de ruta, como Fedwire o Plaid. Mantener una base manual representa un riesgo operativo ante posibles fusiones bancarias. Además, herramientas como Plaid permitirían validar las cuentas de forma anticipada, mitigando los rechazos R03 desde el origen.
+
+También optimizaría la integración de la API de Gemini. Superar los límites de cuotas de un entorno de prueba me habría permitido enfocar el desarrollo en lograr un diálogo mucho más natural y capaz de procesar instrucciones ambiguas del cliente.
+
+Sobre las limitaciones reales de usar inteligencia artificial para fallos ACH, el mayor obstáculo es su aislamiento de la red bancaria. Los errores R01 o R03 son asíncronos y llegan horas después a través de Nacha. El modelo es excelente para explicarle el problema al usuario, pero es ciego ante el fallo real sin un backend transaccional que lo dispare. Esta brecha entre la conversación y la liquidación es el verdadero reto técnico.
+
+Finalmente, la memoria entre sesiones funciona. El sistema guarda el banco, estado y nombre del cliente localmente, garantizando una experiencia fluida sin hacer preguntas repetidas.
